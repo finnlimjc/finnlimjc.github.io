@@ -62,6 +62,8 @@ academic:
   - title: "Seasonal Corporate Revenue Forecasting for Russell 1000 Firms"
     url: "https://github.com/finnlimjc/Seasonal-Corporate-Revenue"
     date: "Feb 2026 – Apr 2026"
+    image: "/assets/img/seasonal-corporate-revenue.png"
+    image_alt: "RMSE and MAPE by SIC division, highlighting the best model per division"
     points:
       - "Built a data pipeline aligning WRDS Compustat quarterly financials with Russell 1000 membership on ISIN and GVKEY. Transformed and normalized raw quarterly revenue into quarterly growth rates; engineered leakage-safe features, such as lags 1–12, rolling mean and volatility, and the industry-wide mean of last quarter's growth."
       - "Applied Fama-MacBeth regressions with Newey-West standard errors and found statistically significant positive annual lags and negative short lags, which motivated an industry-level filter that used Linear Regression to estimate the lag-4 coefficient where industries above the median are classified as seasonal."
@@ -80,6 +82,8 @@ academic:
 
   - title: "Text Mining for English Amazon Reviews"
     date: "Feb 2025 – Apr 2025"
+    image: "/assets/img/text-mining-amazon.png"
+    image_alt: "Power BI dashboard of Amazon customer review sentiment, topics and key phrases"
     points:
       - "Built an NLP preprocessing pipeline in Python (spaCy, TextBlob, num2words, emot) that normalized noisy text by handling emojis/emoticons, internet slang, contractions, spelling errors and selective number conversion through POS tagging of dates, enabling improved sentiment analysis and text classification while preserving contextual meaning."
       - "Managed a team of 5 to build a multi-stage classification pipeline by developing a Bernoulli Naïve Bayes model that leveraged FastText word embeddings to separate meaningful and meaningless reviews; assisted in the development of a TF-IDF Latent Dirichlet Allocation (LDA) model that categorized general versus aspect reviews and further into specific aspect topics."
