@@ -1,0 +1,24 @@
+- title: "Master of Data Science in Economics"
+  subtitle: "Singapore Management University (SMU)"
+  date: "Aug 2026 – Present"
+  details:
+    - label: "Relevant courses"
+      value: "Cloud Computing"
+    - label: "Award"
+      value: "MDSE DSA Distinguished Alumni Scholarship for Academic Excellence and Leadership"
+
+- title: "Bachelor of Business Management"
+  subtitle: "Double Major in Quantitative Finance and Data Science · Singapore Management University (SMU)"
+  date: "Aug 2022 – May 2026"
+  details:
+    - label: "Honours"
+      value: "Summa Cum Laude (GPA 3.90 / 4.00); Dean's List (AY2022/23 and AY2024/25)"
+    - label: "Relevant courses"
+      value: "Linear Algebra, Stochastic Calculus, Text Mining, Reinforcement Learning, Time Series"
+
+- title: "Diploma in Banking and Finance"
+  subtitle: "Ngee Ann Polytechnic"
+  date: "Apr 2017 – May 2020"
+  details:
+    - label: "GPA"
+      value: "3.84 / 4.00"

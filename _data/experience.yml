@@ -1,0 +1,30 @@
+- role: "Research Assistant"
+  organisation: "Singapore Management University (SMU)"
+  entries:
+    - title: "Distributionally Robust Reinforcement Learning"
+      date: "Jan 2026 – Apr 2026"
+      points:
+        - "Replicated a distributionally robust reinforcement learning framework that optimizes against worst-case distributional shifts, using Sinkhorn distance to bound deviations from a reference probability measure."
+        - "Redesigned the price-simulation engine to replace a computationally expensive simulator with a stationary block bootstrap featuring automatic block-length calibration to preserve volatility clustering in synthetic return paths."
+        - "Re-engineered the training pipeline by developing a shared lambda optimization method and a pre-allocated tensor-based replay buffer, cutting training time from 16-24 hours to approximately 1 hour."
+
+    - title: "Securities Lending Data Collection"
+      date: "Oct 2024 – Oct 2025"
+      points:
+        - "Automated extraction of securities lending data from 15,000+ SEC EDGAR filings across 3,300 entities spanning 2016-2024 using Selenium, BeautifulSoup, and FuzzyWuzzy text matching, achieving 90% automated match accuracy."
+        - "Reviewed corporate 10-K filings and EPA news releases to identify disclosure patterns related to environmental penalties, supporting research on the relationship between regulatory enforcement and corporate reporting practices."
+
+    - title: "Social Media Text Collection"
+      date: "Sep 2024 – Oct 2024"
+      points:
+        - "Developed Python scripts (Selenium, BeautifulSoup4) to navigate complex site structures, consisting of form submissions, dynamically updated pages, and multiple layers of content expansion with varying formats."
+        - "Extracted relevant data from the raw HTML content and processed the data into structured formats for analysis and storage based on client specifications. Collected approximately 100,000 posts and comments for further analysis by the professor."
+
+- role: "Teaching Assistant"
+  organisation: "Singapore Management University (SMU)"
+  entries:
+    - title: "Data Analytics for Economics"
+      subtitle: "Postgraduate level"
+      date: "Aug 2026 – Nov 2026"
+      points:
+        - "Supported a course that teaches students to turn raw data into insights using Python, covering data cleaning, transformation, visualization and exploratory analysis, alongside Git/GitHub version control, reproducible data workflows and interactive dashboards."

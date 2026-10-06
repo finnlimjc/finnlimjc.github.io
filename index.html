@@ -1,0 +1,22 @@
+---
+title: "Profile"
+permalink: /
+---
+
+<section class="intro">
+  <p class="intro__role">Quantitative Research / Data Scientist · Singapore</p>
+  <ul class="skills">
+    {% for skill in site.skills %}<li>{{ skill }}</li>{% endfor %}
+  </ul>
+  <p class="intro__links"><a href="https://github.com/finnlimjc">GitHub</a></p>
+</section>
+
+<h2 class="section-title">Education</h2>
+{% for item in site.data.education %}
+  {% include entry.html item=item %}
+{% endfor %}
+
+<h2 class="section-title">Personal Projects</h2>
+{% for item in site.data.projects.personal %}
+  {% include entry.html item=item %}
+{% endfor %}

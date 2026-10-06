@@ -1,0 +1,11 @@
+---
+title: "Academic Experience"
+permalink: /academic-experience/
+---
+
+{% for group in site.data.experience %}
+<h2 class="section-title">{{ group.role }} <span class="section-title__org">· {{ group.organisation }}</span></h2>
+  {% for item in group.entries %}
+    {% include entry.html item=item %}
+  {% endfor %}
+{% endfor %}

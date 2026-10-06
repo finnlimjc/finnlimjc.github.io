@@ -1,0 +1,27 @@
+{% assign item = include.item %}
+<article class="entry">
+  <header class="entry__header">
+    <h3 class="entry__title">
+      {% if item.url %}<a href="{{ item.url }}">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}
+    </h3>
+    <span class="entry__date">{{ item.date }}</span>
+  </header>
+  {% if item.subtitle %}<p class="entry__subtitle">{{ item.subtitle }}</p>{% endif %}
+  {% if item.details %}
+  <dl class="entry__details">
+    {% for detail in item.details %}
+    <div><dt>{{ detail.label }}</dt><dd>{{ detail.value }}</dd></div>
+    {% endfor %}
+  </dl>
+  {% endif %}
+  {% if item.image %}
+  <img class="entry__image" src="{{ item.image | relative_url }}" alt="{{ item.image_alt }}" loading="lazy">
+  {% endif %}
+  {% if item.points %}
+  <ul class="entry__points">
+    {% for point in item.points %}
+    <li>{{ point }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</article>

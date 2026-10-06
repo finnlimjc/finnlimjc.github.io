@@ -1,0 +1,8 @@
+---
+title: "School Projects"
+permalink: /school-projects/
+---
+
+{% for item in site.data.projects.academic %}
+  {% include entry.html item=item %}
+{% endfor %}

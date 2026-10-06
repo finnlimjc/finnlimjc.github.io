@@ -8,19 +8,33 @@ plugins:
   - jekyll-include-cache
   - jekyll-feed
   - jekyll-sitemap
+exclude:
+  - README.md
 author:
   name: Finn Lim
   bio: Quantitative Research / Data Scientist
   location: Singapore
-  employer: Postgraduate Student
   links:
     - label: GitHub
       icon: fab fa-fw fa-github
       url: https://github.com/finnlimjc
+footer:
+  links:
+    - label: GitHub
+      icon: fab fa-fw fa-github
+      url: https://github.com/finnlimjc
+atom_feed:
+  hide: true
+skills:
+  - Python
+  - SQL
+  - AWS
+  - R
+  - Microsoft Excel
+  - Power BI
 defaults:
   - scope:
       path: ""
     values:
       layout: single
-      author_profile: true
-      classes: wide
+      author_profile: false

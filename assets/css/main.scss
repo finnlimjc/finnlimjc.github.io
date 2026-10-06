@@ -1,0 +1,219 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+search: false
+---
+
+@charset "utf-8";
+
+// One typeface everywhere: the theme otherwise mixes system sans, serif captions and narrow headings
+$inter: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$sans-serif: $inter;
+$sans-serif-narrow: $inter;
+$serif: $inter;
+$global-font-family: $inter;
+$header-font-family: $inter;
+$caption-font-family: $inter;
+
+// The theme scales the root font up to 22px on wide screens
+$doc-font-size: 16px;
+$doc-font-size-medium: 16px;
+$doc-font-size-large: 17px;
+$doc-font-size-x-large: 17px;
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+$content-width: 860px;
+$muted: mix($text-color, $background-color, 60%);
+$rule: mix($text-color, $background-color, 12%);
+
+/* Layout: single centred column (no author sidebar) */
+
+#main,
+.masthead__inner-wrap,
+.page__footer footer {
+  max-width: $content-width;
+}
+
+.page {
+  float: none;
+  width: 100%;
+  padding-inline-end: 0;
+
+  @include breakpoint($large) {
+    float: none;
+    width: 100%;
+    padding-inline-end: 0;
+  }
+
+  @include breakpoint($x-large) {
+    width: 100%;
+    padding-inline-end: 0;
+  }
+}
+
+.page__title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.page__content {
+  font-size: 1rem;
+  line-height: 1.6;
+
+  p,
+  li,
+  dl {
+    font-size: 1rem;
+  }
+}
+
+.masthead__menu-item a {
+  font-weight: 500;
+}
+
+/* Profile intro */
+
+.intro {
+  margin-bottom: 2.5rem;
+}
+
+.intro__role {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 0 0 0.75rem;
+}
+
+.intro__links {
+  margin: 0.75rem 0 0;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0;
+    padding: 0.2rem 0.7rem;
+    border: 1px solid $rule;
+    border-radius: 999px;
+    font-size: 0.875rem;
+  }
+}
+
+/* Section headings */
+
+.page__content h2.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 2.5rem 0 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid $rule;
+}
+
+.section-title__org {
+  font-weight: 400;
+  color: $muted;
+}
+
+/* Entries (education, projects, roles) */
+
+.entry {
+  padding: 1.25rem 0;
+
+  & + & {
+    border-top: 1px solid $rule;
+  }
+}
+
+.entry__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
+}
+
+.page__content h3.entry__title {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.entry__date {
+  font-size: 0.875rem;
+  color: $muted;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.page__content .entry__subtitle {
+  font-size: 0.9375rem;
+  color: $muted;
+  margin: 0.15rem 0 0;
+}
+
+.entry__details {
+  margin: 0.6rem 0 0;
+
+  div {
+    display: grid;
+    grid-template-columns: 9.5rem 1fr;
+    gap: 1rem;
+    padding: 0.15rem 0;
+  }
+
+  dt {
+    font-weight: 500;
+    margin: 0;
+  }
+
+  dd {
+    margin: 0;
+  }
+
+  @media (max-width: 600px) {
+    div {
+      grid-template-columns: 1fr;
+      gap: 0;
+      padding: 0.3rem 0;
+    }
+  }
+}
+
+.entry__image {
+  display: block;
+  max-width: 100%;
+  max-height: 320px;
+  width: auto;
+  height: auto;
+  margin: 0.9rem 0 0.25rem;
+  border: 1px solid $rule;
+  border-radius: 6px;
+}
+
+.entry__points {
+  margin: 0.6rem 0 0;
+  padding-inline-start: 1.25rem;
+
+  li {
+    margin-bottom: 0.4rem;
+  }
+}

@@ -1,0 +1,7 @@
+main:
+  - title: "Profile"
+    url: /
+  - title: "School Projects"
+    url: /school-projects/
+  - title: "Academic Experience"
+    url: /academic-experience/
