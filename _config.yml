@@ -1,5 +1,26 @@
 title: Finn Lim
-#logo: /assets/img/headshot_circle.png
-#description: text below image
-show_downloads: false
-theme: jekyll-theme-minimal
+description: Quantitative Research / Data Scientist
+url: https://finnlimjc.github.io
+remote_theme: mmistakes/minimal-mistakes
+minimal_mistakes_skin: default
+plugins:
+  - jekyll-remote-theme
+  - jekyll-include-cache
+  - jekyll-feed
+  - jekyll-sitemap
+author:
+  name: Finn Lim
+  bio: Quantitative Research / Data Scientist
+  location: Singapore
+  employer: Postgraduate Student
+  links:
+    - label: GitHub
+      icon: fab fa-fw fa-github
+      url: https://github.com/finnlimjc
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: single
+      author_profile: true
+      classes: wide
