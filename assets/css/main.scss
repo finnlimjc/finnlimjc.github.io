@@ -119,9 +119,13 @@ $rule: mix($text-color, $background-color, 12%);
   border-bottom: 1px solid $rule;
 }
 
-.section-title__org {
-  font-weight: 400;
+.page__content h3.role-title {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
   color: $muted;
+  margin: 1.75rem 0 0;
 }
 
 /* Entries (education, projects, roles) */
@@ -142,7 +146,7 @@ $rule: mix($text-color, $background-color, 12%);
   gap: 0.25rem 1rem;
 }
 
-.page__content h3.entry__title {
+.page__content .entry__title {
   font-size: 1.0625rem;
   font-weight: 600;
   line-height: 1.4;
