@@ -15,11 +15,23 @@ author:
   bio: Quantitative Research / Data Scientist
   location: Singapore
   links:
+    - label: LinkedIn
+      icon: fab fa-fw fa-linkedin
+      url: https://www.linkedin.com/in/finnljc
+    - label: Medium
+      icon: fab fa-fw fa-medium
+      url: https://medium.com/@finn_lim
     - label: GitHub
       icon: fab fa-fw fa-github
       url: https://github.com/finnlimjc
 footer:
   links:
+    - label: LinkedIn
+      icon: fab fa-fw fa-linkedin
+      url: https://www.linkedin.com/in/finnljc
+    - label: Medium
+      icon: fab fa-fw fa-medium
+      url: https://medium.com/@finn_lim
     - label: GitHub
       icon: fab fa-fw fa-github
       url: https://github.com/finnlimjc
@@ -37,4 +49,4 @@ defaults:
       path: ""
     values:
       layout: single
-      author_profile: false
+      author_profile: true

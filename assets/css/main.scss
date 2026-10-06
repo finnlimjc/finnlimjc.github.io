@@ -23,11 +23,11 @@ $doc-font-size-x-large: 17px;
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-$content-width: 860px;
+$content-width: 1160px; // ~860px text column beside the 300px author sidebar
 $muted: mix($text-color, $background-color, 60%);
 $rule: mix($text-color, $background-color, 12%);
 
-/* Layout: single centred column (no author sidebar) */
+/* Layout: author sidebar on the left, content on the right */
 
 #main,
 .masthead__inner-wrap,
@@ -35,20 +35,26 @@ $rule: mix($text-color, $background-color, 12%);
   max-width: $content-width;
 }
 
+// The theme reserves right-hand space for a table of contents these pages don't use
 .page {
-  float: none;
-  width: 100%;
-  padding-inline-end: 0;
-
   @include breakpoint($large) {
-    float: none;
-    width: 100%;
     padding-inline-end: 0;
   }
 
   @include breakpoint($x-large) {
-    width: 100%;
     padding-inline-end: 0;
+  }
+}
+
+.sidebar {
+  opacity: 1;
+
+  .author__name {
+    font-weight: 700;
+  }
+
+  .author__urls li {
+    font-size: 0.875rem;
   }
 }
 
@@ -84,10 +90,6 @@ $rule: mix($text-color, $background-color, 12%);
   font-size: 1.125rem;
   font-weight: 500;
   margin: 0 0 0.75rem;
-}
-
-.intro__links {
-  margin: 0.75rem 0 0;
 }
 
 .skills {
@@ -157,6 +159,18 @@ $rule: mix($text-color, $background-color, 12%);
   }
 }
 
+.entry__gpa {
+  margin-inline-start: 0.5rem;
+  padding: 0.1rem 0.5rem;
+  border: 1px solid $rule;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: $muted;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
 .entry__date {
   font-size: 0.875rem;
   color: $muted;
@@ -170,7 +184,7 @@ $rule: mix($text-color, $background-color, 12%);
   margin: 0.15rem 0 0;
 }
 
-.entry__details {
+.page__content .entry__details {
   margin: 0.6rem 0 0;
 
   div {
@@ -180,13 +194,16 @@ $rule: mix($text-color, $background-color, 12%);
     padding: 0.15rem 0;
   }
 
-  dt {
-    font-weight: 500;
+  // The theme shrinks dd text, so label and value sizes must both be set here
+  dt,
+  dd {
+    font-size: 0.9375rem;
+    line-height: 1.5;
     margin: 0;
   }
 
-  dd {
-    margin: 0;
+  dt {
+    font-weight: 500;
   }
 
   @media (max-width: 600px) {

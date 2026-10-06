@@ -3,6 +3,7 @@
   <header class="entry__header">
     <h3 class="entry__title">
       {% if item.url %}<a href="{{ item.url }}">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}
+      {% if item.gpa %}<span class="entry__gpa">GPA: {{ item.gpa }}</span>{% endif %}
     </h3>
     <span class="entry__date">{{ item.date }}</span>
   </header>

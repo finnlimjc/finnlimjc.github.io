@@ -59,6 +59,15 @@ academic:
       - "Routed embedded images and scanned PDFs to Gemini 3.6 Flash for OCR and chart-data extraction using LangChain and prompt templates, cached outputs on disk keyed by a hash of image bytes and prompt to avoid repeat calls across re-runs, cutting API cost and latency."
       - "Collaborated on the Streamlit RAG chatbot using Chroma for persistent vector storage, configurable overlapping word-based chunking and top-k semantic retrieval, with Gemini generating grounded answers with numbered source citations; filtered out sources containing detected prompt-injection patterns and documented remaining gaps (vector charts, confidentiality enforcement, unvalidated vision output)."
 
+  - title: "Seasonal Corporate Revenue Forecasting for Russell 1000 Firms"
+    url: "https://github.com/finnlimjc/Seasonal-Corporate-Revenue"
+    date: "Feb 2026 – Apr 2026"
+    points:
+      - "Built a data pipeline aligning WRDS Compustat quarterly financials with Russell 1000 membership on ISIN and GVKEY. Transformed and normalized raw quarterly revenue into quarterly growth rates; engineered leakage-safe features, such as lags 1–12, rolling mean and volatility, and the industry-wide mean of last quarter's growth."
+      - "Applied Fama-MacBeth regressions with Newey-West standard errors and found statistically significant positive annual lags and negative short lags, which motivated an industry-level filter that used Linear Regression to estimate the lag-4 coefficient where industries above the median are classified as seasonal."
+      - "Forecast one-quarter-ahead revenue growth in a sliding-window backtest (12-quarter window, 2008Q4–2025Q4), comparing a naive seasonal baseline, Linear Regression, XGBoost, and Random Forest; models were scored on revenue-level RMSE and MAPE by SIC division."
+      - "Applied TreeSHAP across the Random Forest model to monitor feature importance drift: annual seasonal lags dominated, while short-term features took over during structural breaks."
+
   - title: "Singapore HDB Resale Price Forecast"
     url: "https://github.com/finnlimjc/Singapore-Housing-Price-Forecast"
     date: "Sep 2025 – Nov 2025"
