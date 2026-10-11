@@ -231,7 +231,8 @@ $rule: mix($text-color, $background-color, 12%);
 }
 
 .entry__image--large {
-  max-height: 560px;
+  width: 100%;
+  max-height: none;
 }
 
 .entry__points {
