@@ -17,7 +17,7 @@
   </dl>
   {% endif %}
   {% if item.image %}
-  <img class="entry__image" src="{{ item.image | relative_url }}" alt="{{ item.image_alt }}" loading="lazy">
+  <img class="entry__image{% if item.image_large %} entry__image--large{% endif %}" src="{{ item.image | relative_url }}" alt="{{ item.image_alt }}" loading="lazy">
   {% endif %}
   {% if item.points %}
   <ul class="entry__points">

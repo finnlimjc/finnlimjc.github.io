@@ -230,6 +230,10 @@ $rule: mix($text-color, $background-color, 12%);
   border-radius: 6px;
 }
 
+.entry__image--large {
+  max-height: 560px;
+}
+
 .entry__points {
   margin: 0.6rem 0 0;
   padding-inline-start: 1.25rem;

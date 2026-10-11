@@ -2,6 +2,7 @@ personal:
   - title: "Quantitative Research Pipeline"
     date: "Apr 2026 – Ongoing"
     image: "/assets/img/basis_long_short.png"
+    image_large: true
     image_alt: "Basis long/short strategy backtest results"
     points:
       - "Researched a cross-sectional carry (basis) long/short strategy on 19 commodity futures, ranking by annualized log basis and holding equal-dollar legs. Diagnosed a failing short leg with a rank-versus-forward-return analysis. Compared 6 signal variants (SMA/EMA smoothing, expanding and sliding-window deseasonalization, relative ranking, inverse-volatility sizing) on Sharpe ratio, CAGR, max drawdown, Sortino ratio, and Calmar ratio. Expanding-window deseasonalization raised Sharpe from 0.07 to 0.44 and cut max drawdown from 38% to 19%."
